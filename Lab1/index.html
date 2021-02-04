@@ -53,7 +53,7 @@
 		color: 'green',
 		fillColor: '#f03',
 		fillOpacity: 0.5
-	}).addTo(mymap).bindPopup("I am a circle.");
+	}).addTo(mymap).bindPopup("This is Memorial Stadium!");
 	//(13)notice that you can set the color of the outline by using major color names, as well as the fill color with hex codes
 
 
@@ -85,8 +85,11 @@
 };
 
 //(16) you can also comment out mapped items if you do not want them to draw. note that the var reference above is still present but below i have turned off a layer
-	L.geoJSON(LoveLibrary,{}).addTo(mymap);
+	L.geoJSON(LoveLibrary,{}).addTo(mymap).bindPopup("This is Love Library!");
 
 //(17) think about how you would write some pop up text into your Love Library layer. Look at how it is done above. Read online help. Ask your neighbor. There are multiple approaches!
-
+var Stadia_AlidadeSmoothDark = L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png', {
+	maxZoom: 20,
+	attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a>, &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+});
 </script>
