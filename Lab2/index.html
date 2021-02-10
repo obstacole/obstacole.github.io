@@ -64,7 +64,7 @@
             L.geoJson(covidData).addTo(map);
 
             // Creating containers for the user to interact with 
-            // HELP - this doesn't seem to do anything
+            // HELP - this doesn't seem to do anything??
             var basemaps = {
                 "Light Canvas": canvas,
                 "Satellite Imagery": imagery
@@ -74,7 +74,32 @@
                 "China Provinces": provinces
             };
 
-            L.control.layers(basemaps, overlaymaps, {collapsed: true}).addTo(map);
+            // L.control.layers(basemaps, overlaymaps, {collapsed: true}).addTo(map);
+
+            // Stylization
+            // Are there any online tools that we can use to 
+            // create our own color breaks on a scale?
+            function getColor(value) {
+                return value > 50000000 ? '#54278f':
+                       value > 25000000 ? '#756bb1':
+                       value > 10000000 ? '#9e9ac8':
+                       value > 5000000 ? '#cbc9e2':
+                                         '#f2f0f7';
+            }
+
+            function style(feature) {
+                return {
+                    fillColor: getColor(feature.properties.POP10),
+                    weight: 2,
+                    opacity: 1,
+                    color: 'gray',
+                    fillOpacity: 0.9
+                };
+            }
+
+            var provinces = new L.geoJson(provinces, {style:style}).addTo(map);
+            var covidData = new L.geoJson(covidData).addTo(map);
+
         </script>
    </body>
 </html>
