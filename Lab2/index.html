@@ -63,8 +63,18 @@
             L.geoJson(provinces).addTo(map);
             L.geoJson(covidData).addTo(map);
 
-            
+            // Creating containers for the user to interact with 
+            // HELP - this doesn't seem to do anything
+            var basemaps = {
+                "Light Canvas": canvas,
+                "Satellite Imagery": imagery
+            };
 
+            var overlaymaps = {
+                "China Provinces": provinces
+            };
+
+            L.control.layers(basemaps, overlaymaps, {collapsed: true}).addTo(map);
         </script>
    </body>
 </html>
