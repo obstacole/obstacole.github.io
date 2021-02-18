@@ -68,8 +68,8 @@
                 ext: 'png'
             }).addTo(map);
 
-            L.geoJson(provinces).addTo(map);
-            L.geoJson(covidData).addTo(map);
+            var provinces = new L.geoJson(provinces, {style:style}).addTo(map);
+            // L.geoJson(covidData).addTo(map);
 
             // Creating containers for the user to interact with 
             // HELP - this doesn't seem to do anything??
@@ -105,8 +105,6 @@
                 };
             }
 
-            var provinces = new L.geoJson(provinces, {style:style}).addTo(map);
-
             var minValue = 100;
             var minRadius = 5;
  
@@ -129,9 +127,6 @@
                     });
                 }
             }).addTo(map);
-
-
-
 
             var legend = L.control({position: 'bottomright'}); 
             // Try the other lower corner if you prefer.
