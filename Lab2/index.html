@@ -17,9 +17,17 @@
                 height: 100%; 
             }
 
-            #map {
+            /* #map {
                 min-height: 100%;
-            }
+            } */
+            #map { min-height: 100%; }
+                .legend {
+                    padding: 6px 8px;
+                    line-height: 18px;
+                    background: rgba(255,255,255,0.9);
+                    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+                    border-radius: 5px;
+                }
         </style>
 
     </head>
@@ -74,7 +82,7 @@
                 "China Provinces": provinces
             };
 
-            // L.control.layers(basemaps, overlaymaps, {collapsed: true}).addTo(map);
+            L.control.layers(basemaps, overlaymaps, {collapsed: false}).addTo(map);
 
             // Stylization
             // Are there any online tools that we can use to 
@@ -98,7 +106,67 @@
             }
 
             var provinces = new L.geoJson(provinces, {style:style}).addTo(map);
-            var covidData = new L.geoJson(covidData).addTo(map);
+
+            var minValue = 100;
+            var minRadius = 5;
+ 
+            function calcRadius(val) {
+                return 0.9 * Math.pow(val / minValue, 0.7) * minRadius;
+            }
+
+            // this doesn't do anything either
+            var coviddata = new L.geoJson(coviddata, {
+                onEachFeature: onEachFeature,
+                pointToLayer: function(feature, ll) {
+                    return L.circleMarker(ll, {
+                        color: '#F5AA42',
+                        opacity: 1, 
+                        weight: 2, 
+                        fillColor: '#808080',
+                        fillOpacity: .5,
+                        // radius: 10
+                        radius: calcRadius(feature.properties.covid)
+                    });
+                }
+            }).addTo(map);
+
+
+
+
+            var legend = L.control({position: 'bottomright'}); 
+            // Try the other lower corner if you prefer.
+            legend.onAdd = function (map) {
+                var div = L.DomUtil.create('div', 'legend'),
+                grades = [0, 1000000, 2000000, 5000000, 10000000]; 
+                // break values to define the intervals of population - YOU WILL NEED TO MODIFY IT TO GET THE RIGHT LEGEND BREAKS
+                div.innerHTML = '<b>Population 2019 <br><br></b>';
+                // The legend title, in this case it's Population 2019
+                // Loop through the classes or “grades” and generate a label with a colored square for each interval.
+                for (var i = 0; i < grades.length; i++) {
+                    div.innerHTML +=
+                        '<i style="background:' + getColor(grades[i] + 1) + '"></i>' +
+                        grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] +
+                        '<br><br>' : '+');
+                }
+                return div;
+            };
+
+            legend.addTo(map);
+
+            // Removing the legend when the layer is removed
+            map.on('overlayremove', function(eventLayer){
+                if (eventLayer.name == 'provinces'){ // We use the key/display name to refer to the layer
+                    map.removeControl(legend); // legend is the variable name of the layer legend
+                }
+            });
+
+            // Adding the legend when the layer is added
+            map.on('overlayadd', function(eventLayer){
+                if (eventLayer.name == 'provinces'){
+                    legend.addTo(map);
+                }
+            });
+
 
         </script>
    </body>
