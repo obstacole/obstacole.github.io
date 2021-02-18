@@ -69,10 +69,8 @@
             }).addTo(map);
 
             var provinces = new L.geoJson(provinces, {style:style}).addTo(map);
-            // L.geoJson(covidData).addTo(map);
 
             // Creating containers for the user to interact with 
-            // HELP - this doesn't seem to do anything??
             var basemaps = {
                 "Light Canvas": canvas,
                 "Satellite Imagery": imagery
@@ -132,9 +130,7 @@
                 }  
             }; // end onEachFeature
 
-
-            // this doesn't do anything either
-            var coviddata = new L.geoJson(coviddata, {
+            var coviddata = new L.geoJson(covidData, {
                 onEachFeature: onEachFeature,
                 pointToLayer: function(feature, ll) {
                     return L.circleMarker(ll, {
@@ -153,12 +149,15 @@
             // Try the other lower corner if you prefer.
             legend.onAdd = function (map) {
                 var div = L.DomUtil.create('div', 'legend'),
-                grades = [0, 1000000, 2000000, 5000000, 10000000]; 
+                // grades = [0, 1000000, 2000000, 5000000, 10000000]; 
+                grades = [0, 5000000, 10000000, 25000000, 50000000]; 
+                labels = [];
                 // break values to define the intervals of population - YOU WILL NEED TO MODIFY IT TO GET THE RIGHT LEGEND BREAKS
                 div.innerHTML = '<b>Population 2019 <br><br></b>';
                 // The legend title, in this case it's Population 2019
                 // Loop through the classes or “grades” and generate a label with a colored square for each interval.
                 for (var i = 0; i < grades.length; i++) {
+                    console.log(getColor(grades[i] + 1));
                     div.innerHTML +=
                         '<i style="background:' + getColor(grades[i] + 1) + '"></i>' +
                         grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] +
