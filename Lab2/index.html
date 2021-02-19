@@ -17,16 +17,23 @@
                 height: 100%; 
             }
 
-            /* #map {
-                min-height: 100%;
-            } */
             #map { min-height: 100%; }
                 .legend {
-                    padding: 6px 8px;
+                    padding: 10px;
+                    background: rgba(255,255,255,0.7);
+                    border-radius: 4px;
+                    border-color: rgba(0,0,0,0.7);
+                    border-width: 4px;
+                }
+                .legend i {
+                    padding: 6px 12px;
                     line-height: 18px;
                     background: rgba(255,255,255,0.9);
                     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-                    border-radius: 5px;
+                    border-radius: 2px;
+                    margin-right: 4px;
+                    margin-left: 4px;
+
                 }
         </style>
 
@@ -126,7 +133,7 @@
                     // you must create a layer property on each feature or else
                     // the search results wont know where the item is on the map / layer
                     feature.layer = layer;
-                    layer.bindPopup(popup, {maxWidth: "auto"});
+                    layer.bindPopup(popup, {width: "50px"});
                 }  
             }; // end onEachFeature
 
@@ -150,14 +157,12 @@
             legend.onAdd = function (map) {
                 var div = L.DomUtil.create('div', 'legend'),
                 // grades = [0, 1000000, 2000000, 5000000, 10000000]; 
-                grades = [0, 5000000, 10000000, 25000000, 50000000]; 
-                labels = [];
+                grades = [0, 5000000, 10000000, 25000000, 50000000];
                 // break values to define the intervals of population - YOU WILL NEED TO MODIFY IT TO GET THE RIGHT LEGEND BREAKS
                 div.innerHTML = '<b>Population 2019 <br><br></b>';
                 // The legend title, in this case it's Population 2019
                 // Loop through the classes or “grades” and generate a label with a colored square for each interval.
                 for (var i = 0; i < grades.length; i++) {
-                    console.log(getColor(grades[i] + 1));
                     div.innerHTML +=
                         '<i style="background:' + getColor(grades[i] + 1) + '"></i>' +
                         grades[i] + (grades[i + 1] ? '&ndash;' + grades[i + 1] +
