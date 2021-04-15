@@ -49,16 +49,18 @@
 
             // create projection and where you want to center it
             var albersProjection = d3.geoAlbers()
-            .scale(10000)
-            .rotate([99.76919539822823,0])
-            .center([0, 41.40412042997288])
+            .scale(1000000)
+            // .rotate([99.76919539822823,0])
+            // .center([0, 41.40412042997288])
+            .rotate([96.6327,0])
+            .center([0, 40.8497493])
             .translate([width / 2, height / 2]);
 
             var geoPath = d3.geoPath()
             .projection(albersProjection);
 
             g.selectAll("path")
-            .data(nebraska.features)
+            .data(lnkrds.features)
             .enter()
             .append("path")
             .attr("fill", "#ccc")
@@ -85,13 +87,13 @@
             .data(lnkbldngsjson.features)
             .enter()
             .append("path")
-            .attr("fill", function(d) { return ramp(d.properties.RESYRBLT) })
+            .attr("fill", function(d) { return ramp(d.properties.Name) })
             .attr("stroke", "#999")
             .attr("d", geoPath)
             .attr("class", "buildingdata")
             .on("mouseover", function(d) {
                 // populates h2 with "built in" & the year built field from the json
-                d3.select("h2").text("Built in " + d.properties.RESYRBLT);
+                d3.select("h2").text("Built in " + d.properties.Name);
                 d3.select(this).attr("class", "buildingdata hover");
             })
             // use d3 to replace text interactively based on building data
@@ -100,34 +102,46 @@
                 d3.select(this).attr("class", "buildingdata");
             });
 
-            // create projection and where you want to center it
-            var albersProjection = d3.geoAlbers()
-            .scale(10000)
-            .rotate([99.76919539822823,0])
-            .center([0, 41.40412042997288])
-            .translate([width / 2, height / 2]);
+            // lnk_json.selectAll("path")
+            // .data(nebraska.features)
+            // .enter()
+            // .append("path")
+            // .attr("fill", "#ccc")
+            // .attr("stroke", "#333")
+            // .attr("d", geoPath);
+
+            // // create projection and where you want to center it
+            // var albersProjection = d3.geoAlbers()
+            // .scale(10000)
+            // .rotate([99.76919539822823,0])
+            // .center([0, 41.40412042997288])
+            // .translate([width / 2, height / 2]);
             
-            var geoPath = d3.geoPath()
-            .projection(albersProjection);
+            // var geoPath = d3.geoPath()
+            // .projection(albersProjection);
 
-            g.selectAll("path")
-            .data(nebraska.features)
-            .enter()
-            .append("path")
-            .attr("fill", "#ccc")
-            .attr("stroke", "#333")
-            .attr("d", geoPath);
+            // g.selectAll("path")
+            // .data(nebraska.features)
+            // .enter()
+            // .append("path")
+            // .attr("fill", "#ccc")
+            // .attr("stroke", "#333")
+            // .attr("d", geoPath);
 
-            var neb_json = svg.append("g");
+            // var neb_json = svg.append("g");
 
-            var lowColor = "#bc2a66";
-            var highColor = "#f9f9f9";
+            // var lowColor = "#bc2a66";
+            // var highColor = "#f9f9f9";
 
-            var ramp = d3.scaleLinear()
-            .domain([minVal, maxVal])
-            .range([lowColor, highColor]);
+            // var ramp = d3.scaleLinear()
+            // .domain([minVal, maxVal])
+            // .range([lowColor, highColor]);
 
+            var num = 0
+            console.log(lnkbldngsjson.features)
+            console.log(nebraska.features)
 
+            // nebraska.features.forEach(element => console.log(num++ + " " + element.properties.Name))
         </script>
     </body>
 </html>
