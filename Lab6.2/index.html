@@ -3,6 +3,7 @@
         <title>Lab 8 | D3</title>
 
         <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+        <script src="https://obstacole.github.io/Lab6.2/nebraska.js"></script>
         <script src="https://rshepard2.github.io/Lab9/data/lnkrds.js"></script>
         <script src="https://rshepard2.github.io/Lab9/data/northeast_lnk_blds.js"></script>
 
@@ -32,7 +33,7 @@
     </head>
 
     <body>
-        <h1>Aging Northeast Lincoln Homes</h1>
+        <h1>Nebraska Counties</h1>
         <h2></h2>
         <script>
             // SVG = "scalable vector graphic"
@@ -48,16 +49,16 @@
 
             // create projection and where you want to center it
             var albersProjection = d3.geoAlbers()
-            .scale(2850000)
-            .rotate([96.6327,0])
-            .center([0, 40.8497493])
+            .scale(10000)
+            .rotate([99.76919539822823,0])
+            .center([0, 41.40412042997288])
             .translate([width / 2, height / 2]);
 
             var geoPath = d3.geoPath()
             .projection(albersProjection);
 
             g.selectAll("path")
-            .data(lnkrds.features)
+            .data(nebraska.features)
             .enter()
             .append("path")
             .attr("fill", "#ccc")
@@ -98,6 +99,34 @@
                 d3.select("h2").text("");
                 d3.select(this).attr("class", "buildingdata");
             });
+
+            // create projection and where you want to center it
+            var albersProjection = d3.geoAlbers()
+            .scale(10000)
+            .rotate([99.76919539822823,0])
+            .center([0, 41.40412042997288])
+            .translate([width / 2, height / 2]);
+            
+            var geoPath = d3.geoPath()
+            .projection(albersProjection);
+
+            g.selectAll("path")
+            .data(nebraska.features)
+            .enter()
+            .append("path")
+            .attr("fill", "#ccc")
+            .attr("stroke", "#333")
+            .attr("d", geoPath);
+
+            var neb_json = svg.append("g");
+
+            var lowColor = "#bc2a66";
+            var highColor = "#f9f9f9";
+
+            var ramp = d3.scaleLinear()
+            .domain([minVal, maxVal])
+            .range([lowColor, highColor]);
+
 
         </script>
     </body>
