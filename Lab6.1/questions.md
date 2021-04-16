@@ -1,7 +1,7 @@
 ## Cole McReynolds
 ### Lab 6 Questions
 
-https://obstacole.github.io/Lab6
+https://obstacole.github.io/Lab6.1
 
 1. Cylindrical projections are more common in web maps because it makes finding places much easier when the map is in a grid shape. 
 
