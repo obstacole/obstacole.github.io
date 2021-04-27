@@ -3,7 +3,9 @@
         <title>Lab 8 | D3</title>
 
         <script src="https://d3js.org/d3.v5.min.js" charset="utf-8"></script>
+        <script src="https://obstacole.github.io/Lab6.2/LancasterMunis.js"></script>
         <script src="https://obstacole.github.io/Lab6.2/nebraska.js"></script>
+
         <script src="https://rshepard2.github.io/Lab9/data/lnkrds.js"></script>
         <script src="https://rshepard2.github.io/Lab9/data/northeast_lnk_blds.js"></script>
 
@@ -49,7 +51,7 @@
 
             // create projection and where you want to center it
             var albersProjection = d3.geoAlbers()
-            .scale(1000000)
+            .scale(100000)
             // .rotate([99.76919539822823,0])
             // .center([0, 41.40412042997288])
             .rotate([96.6327,0])
@@ -59,13 +61,49 @@
             var geoPath = d3.geoPath()
             .projection(albersProjection);
 
-            g.selectAll("path")
-            .data(lnkrds.features)
+            feats = [lancasterMunis.features[1],
+            lancasterMunis.features[2],
+            lancasterMunis.features[3],
+            lancasterMunis.features[4],
+            lancasterMunis.features[5],
+            lancasterMunis.features[6],
+            lancasterMunis.features[7],
+            lancasterMunis.features[8],
+            lancasterMunis.features[9],
+            lancasterMunis.features[10],
+            lancasterMunis.features[11],
+            lancasterMunis.features[12],
+            lancasterMunis.features[13],
+            lancasterMunis.features[14]];
+
+            feats = [lancasterMunis.features[0]]
+
+            // nebraska.features.forEach(county => {
+            //     if(county.Name != "Buffalo County, Nebraska") {
+            //         feats.push(county)
+            //     }
+            // })
+
+            // lancasterMunis.features.forEach(element => {
+                g.selectAll("path")
+            .data(feats)
             .enter()
             .append("path")
             .attr("fill", "#ccc")
             .attr("stroke", "#333")
-            .attr("d", geoPath);
+            .attr("d", geoPath)
+            .on("mouseover", function(d) {
+                // populates h2 with "built in" & the year built field from the json
+                d3.select("h2").text("Built in " + d.properties.Name);
+                d3.select(this).attr("class", "buildingdata hover");
+            })
+            // use d3 to replace text interactively based on building data
+            .on("mouseout", function(d) {
+                d3.select("h2").text("");
+                d3.select(this).attr("class", "buildingdata");
+            });
+            // })
+
 
             var lnk_json = svg.append("g");
 
@@ -83,24 +121,24 @@
 
             
 
-            lnk_json.selectAll("path")
-            .data(lnkbldngsjson.features)
-            .enter()
-            .append("path")
-            .attr("fill", function(d) { return ramp(d.properties.Name) })
-            .attr("stroke", "#999")
-            .attr("d", geoPath)
-            .attr("class", "buildingdata")
-            .on("mouseover", function(d) {
-                // populates h2 with "built in" & the year built field from the json
-                d3.select("h2").text("Built in " + d.properties.Name);
-                d3.select(this).attr("class", "buildingdata hover");
-            })
-            // use d3 to replace text interactively based on building data
-            .on("mouseout", function(d) {
-                d3.select("h2").text("");
-                d3.select(this).attr("class", "buildingdata");
-            });
+            // lnk_json.selectAll("path")
+            // .data(lnkbldngsjson.features)
+            // .enter()
+            // .append("path")
+            // .attr("fill", function(d) { return ramp(d.properties.Name) })
+            // .attr("stroke", "#999")
+            // .attr("d", geoPath)
+            // .attr("class", "buildingdata")
+            // .on("mouseover", function(d) {
+            //     // populates h2 with "built in" & the year built field from the json
+            //     d3.select("h2").text("Built in " + d.properties.Name);
+            //     d3.select(this).attr("class", "buildingdata hover");
+            // })
+            // // use d3 to replace text interactively based on building data
+            // .on("mouseout", function(d) {
+            //     d3.select("h2").text("");
+            //     d3.select(this).attr("class", "buildingdata");
+            // });
 
             // lnk_json.selectAll("path")
             // .data(nebraska.features)
@@ -139,7 +177,7 @@
 
             var num = 0
             console.log(lnkbldngsjson.features)
-            console.log(nebraska.features)
+            console.log(lancasterMunis.features)
 
             // nebraska.features.forEach(element => console.log(num++ + " " + element.properties.Name))
         </script>
