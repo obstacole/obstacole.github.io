@@ -40,10 +40,10 @@
                             position: {
                                 latitude: 41.6608232,
                                 longitude: -91.537668,
-                                z: 290
+                                z: 250
                             },
-                            tilt: 60,
-                            heading: 330
+                            tilt: 75,
+                            heading: 270
                         },
                         environment: {
                             lighting: {
@@ -154,10 +154,9 @@
                         }
                     });
 
-                    map.addMany(
-                        [vegetationLayer,
-                         myLayer]
-                    );
+                    // map.addMany([vegetationLayer, myLayer]);
+                    map.add(vegetationLayer);
+
         });
         </script>
     </head>
