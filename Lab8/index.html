@@ -122,8 +122,7 @@
                     ];
 
                     var myLayer = new FeatureLayer({
-                        url: "https://maps.facilities.uiowa.edu/arcgis/rest/services/Features/Buildings/MapServer/0",
-
+                        url: "https://maps.facilities.uiowa.edu/arcgis/rest/services/Features/Bikes/MapServer/5",
                     });
 
                     // define and add vegetation layer
@@ -155,10 +154,7 @@
                         }
                     });
 
-                    // map.addMany([vegetationLayer, myLayer]);
-                    // map.add(vegetationLayer);
-                    map.add(myLayer);
-
+                    map.addMany([vegetationLayer, myLayer]);
 
         });
         </script>
