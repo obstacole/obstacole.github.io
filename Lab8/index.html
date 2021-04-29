@@ -47,7 +47,7 @@
                         },
                         environment: {
                             lighting: {
-                                date: new Date("April 15, 2020 16:00:00 EDT"),
+                                date: new Date("April 28, 2020 12:00:00 EDT"),
                                 directShadowsEnabled: true,
                                 ambientOcclusionEnabled: true
                             }
@@ -59,7 +59,7 @@
                             value: "Crataegus sp.",
                             symbol: {
                                 type: "web-style", // autocasts as new WebStyleSymbol()
-                                name: "Crataegus",
+                                name: "Sunflower",
                                 styleName: "EsriRealisticTreesStyle"
                             }
                         },
@@ -67,7 +67,7 @@
                             value: "Fraxinus pennsylvanica",
                             symbol: {
                                 type: "web-style", // autocasts as new WebStyleSymbol()
-                                name: "Fraxinus",
+                                name: "Flowering Dogwood",
                                 styleName: "EsriRealisticTreesStyle"
                             }
                         },
@@ -75,7 +75,7 @@
                             value: "Picea abies",
                             symbol: {
                                 type: "web-style", // autocasts as new WebStyleSymbol()
-                                name: "Picea",
+                                name: "Witch Hazel",
                                 styleName: "EsriRealisticTreesStyle"
                             }
                         },
@@ -83,7 +83,7 @@
                             value: "Gleditsia triacanthos",
                             symbol: {
                                 type: "web-style", // autocasts as new WebStyleSymbol()
-                                name: "Robinia",
+                                name: "Shadbush",
                                 styleName: "EsriRealisticTreesStyle"
                             }
                         },
@@ -91,7 +91,7 @@
                             value: "Fagus grandifolia",
                             symbol: {
                                 type: "web-style", // autocasts as new WebStyleSymbol()
-                                name: "Fagus",
+                                name: "Sea Islands Yucca",
                                 styleName: "EsriRealisticTreesStyle"
                             }
                         },
@@ -99,7 +99,7 @@
                             value: "Quercus macrocarpa",
                             symbol: {
                                 type: "web-style", // autocasts as new WebStyleSymbol()
-                                name: "Quercus",
+                                name: "Amazon Sword Plant",
                                 styleName: "EsriRealisticTreesStyle"
                             }
                         },
@@ -107,7 +107,7 @@
                             value: "Pinus strobus", // pinus haha
                             symbol: {
                                 type: "web-style", // autocasts as new WebStyleSymbol()
-                                name: "Pinus",
+                                name: "Generic Stump",
                                 styleName: "EsriRealisticTreesStyle"
                             }
                         },
@@ -115,15 +115,16 @@
                             value: "Liriodendron tulipifera",
                             symbol: {
                                 type: "web-style", // autocasts as new WebStyleSymbol()
-                                name: "Philodendron",
+                                name: "Hedgehog Agave",
                                 styleName: "EsriRealisticTreesStyle"
                             }
                         } 
                     ];
 
-                    var myLayer = [
+                    var myLayer = new FeatureLayer({
+                        url: "https://maps.facilities.uiowa.edu/arcgis/rest/services/Features/Buildings/MapServer/0",
 
-                    ];
+                    });
 
                     // define and add vegetation layer
                     var vegetationLayer = new FeatureLayer({
@@ -155,7 +156,9 @@
                     });
 
                     // map.addMany([vegetationLayer, myLayer]);
-                    map.add(vegetationLayer);
+                    // map.add(vegetationLayer);
+                    map.add(myLayer);
+
 
         });
         </script>
