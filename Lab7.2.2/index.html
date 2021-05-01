@@ -107,7 +107,7 @@
             var searchOptions = {
                 position: "topleft",
                 title: "Search",
-                placeholder: "Example: John Smith",
+                placeholder: "Example: Iowa City Operahouse",
                 maxResultLength: 10,
                 caseSensitive: false,
                 showInvisibleFeatures: true,
@@ -116,10 +116,10 @@
                 showResultFct: function(feature, container) {
                     props = feature.properties;
                     var name = L.DomUtil.create('b', null, container);
-                    name.innerHTML = props.LNAME;
+                    name.innerHTML = props.name;
                     container.appendChild(L.DomUtil.create('br', null, container));
 
-                    var cat = props.LNAME ? props.FNAME : props.OCCUPATION, info = cat;
+                    // var cat = props.LNAME ? props.FNAME : props.OCCUPATION, info = cat;
                     container.appendChild(document.createTextNode(info));
                 }
             };
