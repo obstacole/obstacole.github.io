@@ -1,4 +1,4 @@
-{
+var brinton = {
    "type": "FeatureCollection",
    "features": [
   {
@@ -14126,4 +14126,4 @@
     }
   }
 ]
-}
+};
