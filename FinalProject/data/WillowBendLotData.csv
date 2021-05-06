@@ -1,3 +1,77 @@
-LotNum,Resident1,Resident2,Address,City,State,Zip,HomePhone,LakePhone,Email,ForSale
-2,Kent Grosshans,Jeanne Grosshans,2701 Woodland Drive,Central City,NE,68826,308-640-0131,308-940-1971,kgrosshans@msn.com,False
-3,Kathy Greiving,None,3 Willow Bend,Marquette,NE,68854,308-946-3078,None,None,False
+Lot,Resident1,Resident2,Address,City,State,Zip,HomePhone,LakePhone,E mail
+2,Kent Grosshans,Jeanne Grosshans,2701 Woodland Drive,Central City,NE,68826,308-940-0131,308-940-1971,kgrosshans@msn.com
+3,Kathy Greving,None,3 Willow Bend,Marquette,NE,68854,308-946-3078,None,None
+4,Kenneth Kuehner,Roberta Kuehner,4 Willow Bend,Marquette,NE,68854,308-379-0041,None,None
+5,Murry Peterson,None,12625 R Road,Stromsburg,NE,68666,None,402-366-1183,None
+6,Wayne Hilder,None,2218 14th Ave.,Central City,NE,68826,308-946-2250,308-946-2858,None
+7,Christine Gonnerman,None,6244 S. 29th Circle,Lincoln,NE,68516,402-421-6565,None,kreis8@aol.com
+8,Richard Lemmerman,Ann Lemmerman,8 Willow Bend,Marquette,NE,68854,308-946-2522,None,richnanniemmerman@yahoo.com
+9,Gilbert Smith,Dawn Smith,9 Willow Bend,Marquette,NE,68854,308-946-4075,None,None
+10,Delores Havlat,None,10405 Ricky Road,Lincoln,NE,68516,402-421-3447,None,None
+11,Greg Sinner,Kathy Sinner,345 Sunset Drive,Doniphan,NE,68832,402-845-2081,402-469-2055,qksinner@hamitton.ne
+12,Dave Tickner,Cheryl Tickner,799 Valley View Road,Palmer,NE,68864,308-894-8124,308-750-1791,dctickner@eaglecom.net
+13,Glibert Smith,Dawn Smith,9 Willow Bend,Marquette,NE,68854,308-946-2207,None,None
+14,Robert Lovegrove,Vickl Lovegrove,2001 Road 8,Grafton,NE,68365,402-282-7377,402-366-8091,vlovegrove@live.com
+15,Darren Weber,Mirlam Weber,11300 West Roca Road,Crete,NE,68333,402-826-3275,402-560-8886,mswebr@yahoo.com
+16,Weber and,Sanderson ,Jointly owned by #15 & #17,Marquette,NE,68854,None,None,None
+17,Brent Sanderson,Robin Sanderson,1423 W Hwy 34,Aurora,NE,68818,402-694-9258,402-631-9040,brsanderson@hamilton.net
+18,Don Young,Wendy Young,7331 Framton Circle,Lincoln,NE,68516,402-483-0540,402-416-3945,donwendy@live.com
+19,Jeffrey Hansen,None,2004 North V Road,Hampton,NE,68843,402-854-3181,None,jbhansen@hamilton.net
+20,Greg Buhr,Judy Buhr,32260 Road D,Trumbull,NE,68980,402-743-2386,402-631-8772,None
+21,Ryan Chermok,Jessica Chermok,2226 Smlth Street,Lincoln,NE,68502,402-613-7855,402-613-7855,None
+22,Darrell Widman,None,1173 10th Road,Chapman,NE,68827,308-986-2293,None,dtwidman@cconline.net
+23,Steven Schaefer,Debra Schaefer,Lot 23 Willow Bend,Marquette,NE,68854,402-643-8123,None,dschae01@connectseward.org
+24,Corey Dvorak,Nicole Dvorak,830 Terrle Road,Aurora,NE,68818,402-694-2068,402-604-0579,corey_dvorek@yahoo.com
+24,Ryan Dummer,Lana Dummer,210 Limerick Road,Aurora,NE,68818,402-694-6066,402-631-3800,ryan.dummer@yahoo.com
+25,Mark Pfelffer,Kimberly Pfelffer,10420 North Pawnee Avenue,Trumbull,NE,68980,402-744-3981,402-744-3061,None
+26,Gene George,None,1606 E. 12th Rd.,Aurora,NE,68818,402-694-2091,None,schutze4@hamilton.net
+27,Margaret Schnelder,None,100 Q Street,Aurora,NE,68818,402-694-6158,None,shardware@hamilton.net
+28,Norm Johnson,Laurie Johnson,28 Willow Bend,Marquette,NE,68854,308-946-3154,None,NormLaurie50@msn.com
+29,Ed Rathje,Claudia Rathje,1409 North K Road,Phillips,NE,68865,402-694-9640,None,None
+30,Paul Gangwish,Deb Gangwish,57252 145th Road,Shelton,NE,68876,308-647-6563,308-380-6733,paul@nctc.net
+31,Evan Brandes,Roxanne Brandes,1355 U Road,Central City,NE,68826,308-946-3510,308-940-0202,erbrandes53@gmail.com
+32,Todd Bartek,Melissa Bartek,32 Willow Bend,Marquette,NE,68854,None,402-366-1664,tbartek1@hotmail.com
+33,Randy Teel,Barb Teel,33 Willow Bend,Marquette,NE,68854,308-946-3219,None,rbteel@msn.com
+34,Stephen Abbott,Sandy Abbott,34 Willow Bend,Marquette,NE,68854,402-366-2345,None,abbott_studio@hotmailcom
+35,Vincent Valentino,None,9621 Mortensen Drive,Lincoln,NE,68526,402-261-8065,None,None
+36,James Wallingford,Kym Wallingford,1122 Wisconsin Avenue,York,NE,68467,402-362-5776,402-366-9937,wally406@gmail.com
+37,Fadi Tanbouza,Susan Tanbouza ,2123 Woodland Rd,Aurora,NE,68818,402-694-2049,308-940-2551,None
+38,Tom Hardesty,Deb Hardesty,7811 Preserve Lane,Lincoln,NE,68516,402-610-0559,None,thardesty@wellmanninc.com
+39,Andrew Reynolds,Heldi Reynolds,1014 Darrus Dr.,Norfolk,NE,68701,402-278-2789,402-658-9096,ayr418@gmail.com
+40,Steve Horst,Justin Horst,4123 Norwood Drive,Grand Island,NE,68803,308-389-4683,None,None
+41,Dan Emery,None,41 Willow Bend,Marquette,NE,68854,308-379-6012,None,danemery@hamilton.net
+42,Robert Fuelberth,LaNell Fuelberth,1778 13th Road,Central City,NE,68826,308-946-4295,308-940-0253,robnlynn@hamilton.net
+43,Leroy Houdek,None,919 Gunbarrel Road,Grand Island,NE,68801,308-380-9690,None,None
+44,Kevin Waring,Joan Waring,44 Willow Bend,Marquette,NE,68854,308-940-0182,308-9400322,waring44@msn.com
+45,Rob Pfelfer,Chasity Pfelfer,1010 Byers Dr,Central City,NE,68826,402-450-2304,402-429-2027,rob_rent@yahoo.com
+46,Mike Herbig,Ann Herbig,1948 15th Road,Central City,NE,68826,308-940-0113,308-940-0799,aherbig@hotmall.com
+47,Ken Harter,Dorothy Harter,213 West Brackenridge,Edna,TX,77957,402-631-8587,308-946-3228,kdharter@sbcglobal.net
+48,Frank Ann,Mary Ann,1906 S. 41st St.,Lincoln,NE,68506,402-488-5203,None,None
+49,Larry Hans,Carol Hans,7400 Cardwell Circle,Lincoln,NE,68523,None,402-610-1024,hanselec@windstream.net.
+50,David Umstead,Roxanne Umstead,50 Willow Bend,Marquette,NE,68854,308-550-0986,None,None
+51,Roger Petzoldt,Laura Petzoldt,51 Willow Bend,Marquette,NE,68854,308-946-3755,None,lorip855@msn.com
+52,Richard Friedrichsen,Marlene Friedrichsen,2892 20th Road,Clarks,NE,68628,308-548-2631,308-940-1810,runnerandwife@clarks.net
+53,Scott Schuster,Dara Schuster,401 W 10th Road,Phillips,NE,68865,402-886-4636,402-588-2657,sdschuster@hamilton.net
+54,Chris Lenz,Lisa Lenz,54 Willow Bend,Marquette,NE,68854,308-946-5068,None,lenzfamily@q.com
+55,Jim Dose,Carollne Dose,193 North St.,Hampton,NE,68843,402-725-3228,None,None
+56,Gary Warren,Jo Warren,1910 o Street,Aurora,NE,68818,402-694-6241,402-694-9241,gdw@hamilton.net
+57,Kevin Hesson,Diane Hesson,2000 S.W. 70th Street,Lincoln,NE,68532,402-477-3745,None,dhesson22@yahoo.com
+58,Gary Jacobsen,Laura Jacobsen,1005 W. 14th Rd,Aurora,NE,68818,None,None,None
+59,Jim Weltzenkamp,Terl Weltzenkamp,370 County Road 20,Hooper,NE,68031,402-654-2195,402-720-0603,weitzlarms@gmail.net
+60,Gary Osentowskl,Lols Osentowskl,Box 303,York,NE,68467,402-362-6095,None,ozie@alltel.net
+61,Nick Freelend,Becky Freelend,61 Willow Bend,Marquette,NE,68854,308-946-3137,None,nicnbec431@yahoo.com
+62,Walter Campbell,Becky Campbell,1430 208th Dr.,Seward,NE,68434,402-641-8893,402-641-0213,duffc@windstream.net
+62,James Aegerter,Debby Aegerter,P.O. Box 217,Seward,NE,68434,402-643-2390,None,debbyaegerter@hotmail.com
+63,Rick Self,Shelly Self,1911 Devonshire Drive,Lincoln,NE,68506,402-484-0464,402-730-4822,gr8value@rickself.com
+64,Don Erickson,Jeri Erickson,3911 Warbler Rd,Grand Island,NE,68803,308-381-1206,308-850-9793,raydon6969@msn.com
+65,Lennis Benson,Patricia Benson,65 Willow Bend,Marquette,NE,68702,402-649-7550,402-649-7550,lbenson47@gmail.com
+66,Steve Glause,Beckle Glause,703 L Road,Chapman,NE,68827,308-986-2601,308-380-2602,beckieglause@hotmail.com
+67,Dave Benner,Kim Benner,67 Willow Bend,Marquette,NE,68854,308-940-026,308-940-2839,kimbenner1@gmail.com
+68,Kevin Schnelder,Pat Schnelder,68 Willow Bend,Marquette,NE,68854,308-946-3685,None,beachcomberinc@msn.com
+69,Clint Ohlson,None,69 Willow Bend,Marquette,NE,68818,308-380-2841,None,None
+70,Jordan Everson,None,70 Willow Bend,Marquette,NE,68854,380-940-1808,None,None
+71,Marlo Broekemeler,Gloria Broekemeler,71 Willow Bend,Marquette,NE,68854,308-946-3607,None,None
+72,Steve Twiss,Kristi Twiss,2211 Berryman Lane,Central City,NE,68826,308-946-5453,308-940-0324,twiss@cconline.net
+73,Scott Ratliff,Monica Ratliff,73 Willow Bend,Marquette,NE,68854,308-380-0807,None,None
+74,Carl McReynolds,Marllyn McReynolds,6301 Rebel Drive,Lincoln,NE,68516,None,402-423-6301,None
+75,Jerry Westring,Joann Westring,1001 E Sixth St,Stromsburg,NE,68666,402-764-8170,None,None
