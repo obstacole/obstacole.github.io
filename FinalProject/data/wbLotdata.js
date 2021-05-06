@@ -816,7 +816,7 @@ var lotData = [
    "E mail": "kimbenner1@gmail.com"
  },
  {
-   "Lot": 68,
+   "Lot": "68",
    "Resident1": "Kevin Schnelder",
    "Resident2": "Pat Schnelder",
    "Address": "68 Willow Bend",
@@ -828,7 +828,7 @@ var lotData = [
    "E mail": "beachcomberinc@msn.com"
  },
  {
-   "Lot": 69,
+   "Lot": "69",
    "Resident1": "Clint Ohlson",
    "Resident2": "None",
    "Address": "69 Willow Bend",
@@ -840,7 +840,7 @@ var lotData = [
    "E mail": "None"
  },
  {
-   "Lot": 70,
+   "Lot": "70",
    "Resident1": "Jordan Everson",
    "Resident2": "None",
    "Address": "70 Willow Bend",
@@ -852,7 +852,7 @@ var lotData = [
    "E mail": "None"
  },
  {
-   "Lot": 71,
+   "Lot": "71",
    "Resident1": "Marlo Broekemeler",
    "Resident2": "Gloria Broekemeler",
    "Address": "71 Willow Bend",
@@ -864,7 +864,7 @@ var lotData = [
    "E mail": "None"
  },
  {
-   "Lot": 72,
+   "Lot": "72",
    "Resident1": "Steve Twiss",
    "Resident2": "Kristi Twiss",
    "Address": "2211 Berryman Lane",
@@ -876,7 +876,7 @@ var lotData = [
    "E mail": "twiss@cconline.net"
  },
  {
-   "Lot": 73,
+   "Lot": "73",
    "Resident1": "Scott Ratliff",
    "Resident2": "Monica Ratliff",
    "Address": "73 Willow Bend",
@@ -888,7 +888,7 @@ var lotData = [
    "E mail": "None"
  },
  {
-   "Lot": 74,
+   "Lot": "74",
    "Resident1": "Carl McReynolds",
    "Resident2": "Marllyn McReynolds",
    "Address": "6301 Rebel Drive",
@@ -900,7 +900,7 @@ var lotData = [
    "E mail": "None"
  },
  {
-   "Lot": 75,
+   "Lot": "75",
    "Resident1": "Jerry Westring",
    "Resident2": "Joann Westring",
    "Address": "1001 E Sixth St",
