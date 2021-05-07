@@ -43,10 +43,27 @@
       var onEachFeature = function(feature, layer) {
         if (feature.properties) {
           var prop = feature.properties;
-          // var i=0;
           var lot = lotData.find(element => element["Lot"] === parseInt(prop["LotNum"]));
 
-	        var popup = lot["Lot"] + " ";
+	        var popup = "<h2>Lot " + lot["Lot"] + "</h2> <br>";
+          if(lot["Resident2"] === "None") {
+            popup += "Member: " + lot["Resident1"];
+          } else {
+            popup += "Members: " + lot["Resident1"] + " and " + lot["Resident2"];
+          }
+          popup += "<br>Address: " + lot["Address"] + " " + lot["City"] + ", " + lot["State"] + " " + lot["Zip"];
+          
+          if(lot["HomePhone"] !== "None") {
+            popup += "<br>Home Phone: " + lot["HomePhone"]; 
+          }
+
+          if(lot["LakePhone"] !== "None") {
+            popup += "<br>Lake Phone: " + lot["LakePhone"]; 
+          }
+
+          if(lot["E mail"] !== "None") {
+            popup += "<br>E-Mail: " + lot["E mail"]; 
+          }
 
           feature.layer = layer;
           layer.bindPopup(popup, {width: "50px"});
